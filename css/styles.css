@@ -128,5 +128,8 @@ body{
 	.project-description{
 		display: none;
 	}
+	.head{
+		font-size: 25px;
+	}
 
 }
