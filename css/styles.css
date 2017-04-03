@@ -1,0 +1,132 @@
+body{
+	font-family: 'Roboto',sans-serif;
+	background: url("/Kickstarter-Browser/assets/geometry2.png");
+	background-repeat: repeat;
+	overflow-x: hidden;
+}
+
+.head{
+	width: 100%;
+	height: 50px;
+	font-size: 55px;
+	font-family: 'Macondo',cursive;
+	text-align: center;
+	margin-bottom: 25px;
+	margin-top: 10px;
+}
+
+.center-aligned{
+	text-align: center;	
+}
+
+.card-image{
+	background: url("/Kickstarter-Browser/assets/placeholder.png");
+	height: 200px;
+}
+
+.project-name{
+	margin: 0;
+	font-size: 18px;
+	padding-bottom: 10px;
+}
+
+.project-creator{
+	font-size: 14px;
+	margin: 0;
+	color: #cecece;
+}
+
+.project-location{
+	font-size: 12px;
+	line-height: 25px;
+	margin: 0;
+	color: #bbb;
+}
+
+.card-title{
+	padding-bottom: 5px !important;
+}
+
+.KS-link-button{
+	background: #00e676;
+}
+
+.KS-link-button:hover{
+	background: #c8ffcf;
+}
+.card{
+	margin: 2rem 0.75rem;
+}
+
+.card div.card-content{
+	padding-bottom:5px;
+}
+
+.project-description{
+	font-size: 14px;
+}
+
+.card div.card-action{
+	padding-top: 0;
+	padding-right: 5px;
+	border: none;
+}
+
+.progress-bar{
+	width: 100%;
+	height: 6px;
+	margin-right: 20px;
+	border-radius: 3px;
+	background: #c8ffcf ;
+}
+
+.progress-bar-completed{
+	width: 70%;
+	height: 6px;
+	border-radius: 3px;
+	background: #00e676;
+}
+.percent-complete{
+	position: relative;
+	left: 65%;
+	margin-right: 0.25rem;
+	font-size: 0.75rem;
+	font-weight: bold;
+}
+
+.funding-stats{
+	margin: 0;
+	margin-top: 15px;
+}
+.funding-stats>div>span{
+		font-size: 1.1rem;
+		font-weight: bold;
+}
+.funding-stats>div>span.days{
+		font-size: 0.71rem;
+		font-weight: normal;
+}
+
+
+@media only screen and (min-width: 993px){
+	.container{
+		width: 80%;
+	}
+	.card .card-image img{
+		height: 35vh;
+	}
+	.funding-stats>div>span{
+		font-size: 1.3rem;
+	}
+	.funding-stats>div>span.days{
+		font-size: 0.81rem;
+	}
+}
+
+@media only screen and (max-width: 500px){
+
+	.project-description{
+		display: none;
+	}
+
+}
