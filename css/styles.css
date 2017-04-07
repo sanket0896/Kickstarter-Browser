@@ -1,6 +1,7 @@
 body{
 	font-family: 'Roboto',sans-serif;
-	background: url("/Kickstarter-Browser/assets/geometry2.png");
+	background: url("/Kickstarter-Browser/assets/placeholder.png");
+	background-attachment: fixed;
 	background-repeat: repeat;
 	overflow-x: hidden;
 }
@@ -19,33 +20,61 @@ body{
 	text-align: center;	
 }
 
-.card-image{
-	background: url("/Kickstarter-Browser/assets/placeholder.png");
+.card .card-image{
+	background-color: #333333;
 	height: 200px;
+	cursor: default;
 }
 
 .project-name{
 	margin: 0;
 	font-size: 18px;
 	padding-bottom: 10px;
+	color: #fff;
+	opacity: 1;
+	position: static;
+	transition: all 0.3s linear;
+}
+
+.card .card-image:hover .project-name{
+	opacity: 1 !important;
+	margin-bottom: -1rem;
 }
 
 .project-creator{
 	font-size: 14px;
 	margin: 0;
-	color: #cecece;
+	color: #fff;
+	transition: all 0.3s linear;
+}
+
+.card .card-image:hover .project-creator{
+	opacity: 0 !important;
+	
 }
 
 .project-location{
 	font-size: 12px;
 	line-height: 25px;
 	margin: 0;
-	color: #bbb;
+	color: #fff;
+	transition: all 0.3s linear;
 }
 
-.card-title{
-	padding-bottom: 5px !important;
+.card .card-image:hover .project-location{
+	opacity: 0 !important;
+	margin-bottom: -0.5rem;
+
 }
+
+.card .card-image .card-title{
+	padding-bottom: 5px;
+	transition: all 0.3s linear;
+}
+
+/*.card .card-image:hover .card-title{
+	opacity: 0;
+}*/
 
 .KS-link-button{
 	background: #00e676;
@@ -105,6 +134,26 @@ body{
 .funding-stats>div>span.days{
 		font-size: 0.71rem;
 		font-weight: normal;
+}
+
+.amt-pledged{
+	text-align: left;
+}
+
+.backers,.days-left{
+	text-align: center;
+}
+
+.mask-div{
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.7);
+	z-index: 9999;
+	transition: all 0.3s linear;
+}
+
+.card-image:hover .mask-div{
+	background: rgba(0,0,0,0);
 }
 
 
