@@ -110,7 +110,7 @@ function populateHTML(jsonURL){
 				items.push(thisJsonItem);
 
 				$('#targetElement').append(generatedHTML);
-				console.log("after"+$(window).scrollTop());
+				// console.log("after"+$(window).scrollTop());
 				$(window).scrollTop(tempScrollTop);
 
 		});
@@ -126,7 +126,7 @@ function populateHTML(jsonURL){
 $('#targetElement').html(" ");
 
 var jsonURL = getWebsiteURL();
-console.log("before"+$(window).scrollTop());
+// console.log("before"+$(window).scrollTop());
 populateHTML(jsonURL);
 
 $(window).on("scroll",function () {
@@ -134,10 +134,10 @@ $(window).on("scroll",function () {
 		$(".load").removeClass("load");
 		jsonURL = getWebsiteURL();
 		tempScrollTop=$(window).scrollTop();
-		console.log("before"+$(window).scrollTop());
+		// console.log("before"+$(window).scrollTop());
 		populateHTML(jsonURL);
 		$(window).scrollTop(tempScrollTop);
-		console.log("Need  to load");
+		// console.log("Need  to load");
 	}
 });
 
