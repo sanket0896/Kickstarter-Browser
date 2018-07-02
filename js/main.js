@@ -110,13 +110,15 @@ function populateHTML(jsonURL){
 				items.push(thisJsonItem);
 
 				$('#targetElement').append(generatedHTML);
-				console.log("after"+$(window).scrollTop());
-				$(window).scrollTop(tempScrollTop);
-
-		});
-		loadTop=$(".load").offset().top;
-		// console.log(loadTop);
-		$('.card').matchHeight({byRow:true});
+				
+				
+			});
+			loadTop=$(".load").offset().top;
+			// console.log("loadTop= ", loadTop);
+			$('.card').matchHeight({byRow:true});
+			// console.log("tempScrollTop = ", tempScrollTop);
+			$(window).scrollTop(tempScrollTop);
+			// console.log("after"+$(window).scrollTop());
 	});
 }
 
@@ -126,18 +128,19 @@ function populateHTML(jsonURL){
 $('#targetElement').html(" ");
 
 var jsonURL = getWebsiteURL();
-console.log("before"+$(window).scrollTop());
+// console.log("before"+$(window).scrollTop());
 populateHTML(jsonURL);
 
 $(window).on("scroll",function () {
+	//console.log($(window).scrollTop());
+	
+	tempScrollTop=$(window).scrollTop();
+
 	if(needToLoad()){
 		$(".load").removeClass("load");
 		jsonURL = getWebsiteURL();
-		tempScrollTop=$(window).scrollTop();
-		console.log("before"+$(window).scrollTop());
+		//console.log("before"+$(window).scrollTop());
 		populateHTML(jsonURL);
-		$(window).scrollTop(tempScrollTop);
-		console.log("Need  to load");
 	}
 });
 
